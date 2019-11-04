@@ -1,0 +1,184 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.2.214/W32 for ARM                  04/Nov/2019  23:21:42
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =  D:\IAR_TEST\LED\Debug\Exe\Project.out
+#    Map file     =  D:\IAR_TEST\LED\Debug\List\Project.map
+#    Command line =
+#        -f C:\Users\lenovo\AppData\Local\Temp\EW6DD3.tmp
+#        (D:\IAR_TEST\LED\Debug\Obj\core_cm3.o D:\IAR_TEST\LED\Debug\Obj\led.o
+#        D:\IAR_TEST\LED\Debug\Obj\main.o D:\IAR_TEST\LED\Debug\Obj\misc.o
+#        D:\IAR_TEST\LED\Debug\Obj\stm32f10x_flash.o
+#        D:\IAR_TEST\LED\Debug\Obj\stm32f10x_gpio.o
+#        D:\IAR_TEST\LED\Debug\Obj\stm32f10x_it.o
+#        D:\IAR_TEST\LED\Debug\Obj\stm32f10x_rcc.o
+#        D:\IAR_TEST\LED\Debug\Obj\system_stm32f10x.o --no_out_extension -o
+#        D:\IAR_TEST\LED\Debug\Exe\Project.out --map
+#        D:\IAR_TEST\LED\Debug\List\Project.map --config
+#        D:\IAR_TEST\LED\stm32f10x_flash.icf --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x80f'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2001'7fff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind         Address   Size  Object
+  -------   ----         -------   ----  ------
+"A0":                              0x40
+  .intvec   ro code   0x800'0000   0x40  vector_table_M.o [3]
+                    - 0x800'0040   0x40
+
+"P1":                             0x1d4
+  .text     ro code   0x800'0040   0xcc  stm32f10x_gpio.o [1]
+  .text     ro code   0x800'010c   0x4c  main.o [1]
+  .text     ro code   0x800'0158   0x38  led.o [1]
+  .text     ro code   0x800'0190   0x20  stm32f10x_rcc.o [1]
+  .text     ro code   0x800'01b0   0x1e  cmain.o [3]
+  .text     ro code   0x800'01ce    0x4  low_level_init.o [2]
+  .text     ro code   0x800'01d2    0x4  exit.o [2]
+  .text     ro code   0x800'01d6   0x12  stm32f10x_it.o [1]
+  .text     ro code   0x800'01e8    0xa  cexit.o [3]
+  .text     ro code   0x800'01f4   0x14  exit.o [4]
+  .text     ro code   0x800'0208    0xc  cstartup_M.o [3]
+                    - 0x800'0214  0x1d4
+
+"P2":                             0x400
+  CSTACK             0x2000'0000  0x400  <Block>
+    CSTACK  uninit   0x2000'0000  0x400  <Block tail>
+                   - 0x2000'0400  0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'0214   0x80f'ffff  0xf'fdec
+  0x2000'0400  0x2001'7fff  0x1'7c00
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  rw data
+    ------            -------  -------
+command line/config:
+    ----------------------------------
+    Total:
+
+D:\IAR_TEST\LED\Debug\Obj: [1]
+    led.o                  56
+    main.o                 76
+    stm32f10x_gpio.o      204
+    stm32f10x_it.o         18
+    stm32f10x_rcc.o        32
+    ----------------------------------
+    Total:                386
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    ----------------------------------
+    Total:                  8
+
+rt7M_tl.a: [3]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           12
+    vector_table_M.o       64
+    ----------------------------------
+    Total:                116
+
+shb_l.a: [4]
+    exit.o                 20
+    ----------------------------------
+    Total:                 20
+
+    Gaps                    2
+    Linker created               1'024
+--------------------------------------
+    Grand Total:          532    1'024
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+?main                    0x800'01b1        Code  Gb  cmain.o [3]
+BusFault_Handler         0x800'01dd   0x2  Code  Gb  stm32f10x_it.o [1]
+CSTACK$$Base            0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0400         --   Gb  - Linker created -
+DebugMon_Handler         0x800'01e3   0x2  Code  Gb  stm32f10x_it.o [1]
+GPIO_Init                0x800'0041  0xc0  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_ResetBits           0x800'0107   0x6  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_SetBits             0x800'0101   0x6  Code  Gb  stm32f10x_gpio.o [1]
+HardFault_Handler        0x800'01d9   0x2  Code  Gb  stm32f10x_it.o [1]
+LED_Init                 0x800'0159  0x38  Code  Gb  led.o [1]
+MemManage_Handler        0x800'01db   0x2  Code  Gb  stm32f10x_it.o [1]
+NMI_Handler              0x800'01d7   0x2  Code  Gb  stm32f10x_it.o [1]
+PendSV_Handler           0x800'01e5   0x2  Code  Gb  stm32f10x_it.o [1]
+RCC_APB2PeriphClockCmd   0x800'0191  0x1c  Code  Gb  stm32f10x_rcc.o [1]
+Region$$Table$$Base             0x0         --   Gb  - Linker created -
+Region$$Table$$Limit            0x0         --   Gb  - Linker created -
+SVC_Handler              0x800'01e1   0x2  Code  Gb  stm32f10x_it.o [1]
+SysTick_Handler          0x800'01e7   0x2  Code  Gb  stm32f10x_it.o [1]
+UsageFault_Handler       0x800'01df   0x2  Code  Gb  stm32f10x_it.o [1]
+__cmain                  0x800'01b1        Code  Gb  cmain.o [3]
+__exit                   0x800'01f5  0x14  Code  Gb  exit.o [4]
+__iar_program_start      0x800'0209        Code  Gb  cstartup_M.o [3]
+__low_level_init         0x800'01cf   0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000        Data  Gb  vector_table_M.o [3]
+_call_main               0x800'01bd        Code  Gb  cmain.o [3]
+_exit                    0x800'01e9        Code  Gb  cexit.o [3]
+_main                    0x800'01cb        Code  Gb  cmain.o [3]
+delay                    0x800'010d  0x14  Code  Gb  main.o [1]
+exit                     0x800'01d3   0x4  Code  Gb  exit.o [2]
+main                     0x800'0121  0x32  Code  Gb  main.o [1]
+
+
+[1] = D:\IAR_TEST\LED\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+    532 bytes of readonly  code memory
+  1'024 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
