@@ -1,0 +1,23 @@
+stm32f10x_i2c.pbi: D:\IAR_TEST\CLK\Std_Lib\src\stm32f10x_i2c.c \
+  D:\IAR_TEST\CLK\Std_Lib\inc\stm32f10x_i2c.h \
+  D:\IAR_TEST\CLK\Std_Lib\stm32f10x.h \
+  E:\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\CMSIS\Core\Include\core_cm3.h \
+  E:\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
+  E:\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+  E:\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
+  E:\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
+  E:\\IAR\ Systems\\Embedded\ Workbench\ 8.3\\arm\\inc\\c\\DLib_Config_Normal.h \
+  E:\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
+  E:\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\CMSIS\Core\Include/cmsis_version.h \
+  E:\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\CMSIS\Core\Include/cmsis_compiler.h \
+  E:\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\CMSIS\Core\Include\cmsis_iccarm.h \
+  E:\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iccarm_builtin.h \
+  D:\IAR_TEST\CLK\Std_Lib/system_stm32f10x.h \
+  D:\IAR_TEST\CLK\Std_Lib/stm32f10x_conf.h \
+  D:\IAR_TEST\CLK\Std_Lib\inc\stm32f10x_dma.h \
+  D:\IAR_TEST\CLK\Std_Lib\inc\stm32f10x_flash.h \
+  D:\IAR_TEST\CLK\Std_Lib\inc\stm32f10x_gpio.h \
+  D:\IAR_TEST\CLK\Std_Lib\inc\stm32f10x_rcc.h \
+  D:\IAR_TEST\CLK\Std_Lib\inc\stm32f10x_spi.h \
+  D:\IAR_TEST\CLK\Std_Lib\inc\stm32f10x_tim.h \
+  D:\IAR_TEST\CLK\Std_Lib\inc\misc.h
